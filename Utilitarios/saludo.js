@@ -2,9 +2,11 @@ saludar=function(){
     let nombre=recuperarTexto("txtNombre");
     let apellido=recuperarTexto("txtApellido");
     let edad=recuperarEntero("txtEdad");
-    let altura=RecuperarFloat("txtEstatura");
+    let altura=recuperarFloat("txtEstatura");
     console.log("Hola "+nombre+" "+apellido);
     console.log("Tienes "+edad+" años y mides "+altura+" metros.");
+    let mensajeBienvenida="Hola "+nombre+" "+apellido+". Tienes "+edad+" años y mides "+altura+" metros.";
+    mostrarTexto("lblResultado",mensajeBienvenida);
 }
 recuperarTexto=function(idComponente){
     let componente;
@@ -19,8 +21,13 @@ recuperarEntero=function(idComponente){
     return valorEntero;
 }
 
-RecuperarFloat=function(idComponente){
+recuperarFloat=function(idComponente){
     let valorCaja=document.getElementById(idComponente);
     let valorFlotante=parseFloat(valorCaja.value);
     return valorFlotante;
+}
+
+mostrarTexto=function(idComponente,mensaje){
+    let componente=document.getElementById(idComponente);
+    componente.innerText=mensaje;
 }

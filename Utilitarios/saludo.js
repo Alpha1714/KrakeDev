@@ -7,6 +7,8 @@ saludar=function(){
     console.log("Tienes "+edad+" años y mides "+altura+" metros.");
     let mensajeBienvenida="Hola "+nombre+" "+apellido+". Tienes "+edad+" años y mides "+altura+" metros.";
     mostrarTexto("lblResultado",mensajeBienvenida);
+    mostarImagen("imgSaludo","./imagenes/saludo.gif");
+    mostrarTextoEnCaja("txtNombre","");
 }
 recuperarTexto=function(idComponente){
     let componente;
@@ -30,4 +32,14 @@ recuperarFloat=function(idComponente){
 mostrarTexto=function(idComponente,mensaje){
     let componente=document.getElementById(idComponente);
     componente.innerText=mensaje;
+}
+
+mostarImagen=function(idComponente,rutaimagen){
+    let componente=document.getElementById(idComponente);
+    componente.src=rutaimagen;
+}
+
+mostrarTextoEnCaja=function(idComponente,mensaje){
+    let componente=document.getElementById(idComponente);
+    componente.value=mensaje;
 }

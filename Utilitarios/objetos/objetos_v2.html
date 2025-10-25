@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="objeto_v2.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+<body>
+    <h5>Ingrese el Nombre</h5>
+    <input type="text" id="txtNombre" />
+    <h5>Ingrese el Numero de Cedula</h5>
+    <input type="text" id="txtCedula" />
+    <h5>Ingrese el Genero</h5>
+    <input type="text" id="txtGenero" />
+    <h5>Ingrese el Edad</h5>
+    <input type="text" id="txtEdad" />
+    <input type="button" value="Generar Tabla" onclick="generarCliente();" />
+    <input type="button" value="Agregar Cliente" onclick="ejecutarAgregarCliente();" />
+    <input type="button" value="Guardar Modificacion" onclick="guardarCambios();" />
+    <h5>Buscar Numero de Cedula</h5>
+    <input type="text" id="txtBusquedaCedula" />
+    <input type="button" value="Buscar Cliente" onclick="ejecutarBusquedad();" />
+
+    <div id="clienteTabla"></div>
+</body>
+</html>

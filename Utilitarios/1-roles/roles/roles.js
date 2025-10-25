@@ -217,3 +217,46 @@ if (cedula == "" || (cedula.length < 10 || cedula.length > 11)){
         }
     }
 } 
+
+deshabilitarAlGuardar = function(){
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
+}
+
+ejecutarBusqueda =  function(){
+   
+    let busquedadCedula = recuperarTexto("txtBusquedaCedula");
+    let empleadoBuscado = buscarEmpleado(busquedadCedula);;
+
+    if (empleadoBuscado == null ){
+        alert("Empleado No Existe")
+        mostrarTextoEnCaja("txtCedula","");
+        mostrarTextoEnCaja("txtNombre","");
+        mostrarTextoEnCaja("txtApellido", "");
+        mostrarTextoEnCaja("txtSueldo","");
+    } else {
+        mostrarTextoEnCaja("txtCedula",empleadoBuscado.cedula);
+        mostrarTextoEnCaja("txtNombre",empleadoBuscado.nombre);
+        mostrarTextoEnCaja("txtApellido", empleadoBuscado.apellido);
+        mostrarTextoEnCaja("txtSueldo",empleadoBuscado.sueldo);
+        habilitarComponente("txtNombre");
+        habilitarComponente("txtApellido");
+        habilitarComponente("txtSueldo");
+        habilitarComponente("btnGuardar");
+        esNuevo = false;
+    }
+
+}
+
+limpiar =  function(){
+    esNuevo = false;
+    mostrarTextoEnCaja("txtCedula","");
+    mostrarTextoEnCaja("txtNombre","");
+    mostrarTextoEnCaja("txtApellido", "");
+    mostrarTextoEnCaja("txtSueldo","");
+    mostrarTextoEnCaja("txtBusquedaCedula","");
+    deshabilitarComponente("btnGuardar");
+}

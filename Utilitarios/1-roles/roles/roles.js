@@ -260,3 +260,49 @@ limpiar =  function(){
     mostrarTextoEnCaja("txtBusquedaCedula","");
     deshabilitarComponente("btnGuardar");
 }
+
+buscarRol = function(cedula){
+let objeto;
+let empleadoEncontrado2 = null;
+
+    for (let i=0 ; i<roles.length ; i++){
+        objeto = roles[i];
+
+        if(objeto.cedula == cedula){
+            empleadoEncontrado2 = objeto;
+            break;
+        }
+    }
+    return empleadoEncontrado2;
+}
+
+calcularAporteEmpleado =  function(sueldo){
+let aporteEmpleado =  sueldo * 0.0945
+return aporteEmpleado;
+}
+
+calcularValorAPagar = function(sueldo,aporte,descuento){
+let pagarEmpleado =  sueldo - aporte - descuento;
+return pagarEmpleado;
+}
+
+calcularRol = function(){
+    let sueldo = recuperarFloatDiv("infoSueldo");
+    let descuentos = recuperarFloat("txtDescuentos");
+
+    if (isNaN(sueldo) || sueldo< 0 ){
+        alert("Sueldo Incorrecto");
+        return;
+    } else if (isNaN(descuentos)){
+        alert ("El valor de descuento debe ser un numero")
+        return;
+    } else {
+        let aporteEmpleado = calcularAporteEmpleado(sueldo);
+        mostrarTextoDiv("infoIESS",aporteEmpleado);
+        let valorAPagar = calcularValorAPagar(sueldo,aporteEmpleado,descuentos);
+        mostrarTextoDiv("infoPago",valorAPagar);
+        habilitarComponente("btnGuardarRol");
+    } 
+}
+
+

@@ -1,0 +1,223 @@
+body{
+    background-color: #0b0c0c;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* ==== TABLA DE EMPLEADOS ==== */
+.tablaempleados {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(205, 166, 166, 0.1);
+}
+
+/* Encabezado */
+.tablaempleados th {
+  background-color: #f1f1f1; /* verde oscuro */
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Filas */
+.tablaempleados td {
+  padding: 8px;
+  text-align: center;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Alternar colores entre filas */
+.tablaempleados tr:nth-child(even) td {
+  background-color: #e9f6ea; /* verde claro */
+}
+
+
+.area{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid;
+    border-color: #2ba3ed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.principal{
+    display: flex;
+   
+    margin-left: 0px;
+    margin-right:0px;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+    flex: 1;
+
+}
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logoEscuela{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    
+}
+.areaResultado{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imagen{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+  
+}
+.estiloBoton{
+    background-color: #213f70; 
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 200px;
+
+}
+.menu{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+tbody tr:nth-child(odd) {
+    background-color: #24f8df;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #1e6367;
+  }
+  
+  table {
+    background-color: #0b0c0c;
+    width: 100%;
+  }
+  td{
+    text-align: center;
+  }
+  .areaTabla{
+    margin-top: 20px;
+  }
+.estiloBoton:hover {
+    background-color:white; 
+    color: #2ba3ed;
+    border: 1px solid;
+    border-color: #217023;
+    border-radius: 5px;
+}
+.estiloBoton:active{
+    background-color: #136e4b; 
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.estiloBoton:disabled {
+    background-color:gray; 
+    color: #232623;
+    border: 1px solid;
+    border-color: #232623;
+    border-radius: 5px;
+}
+.contenedorBoton{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+.cajaTexto{
+    border-radius: 4px;
+    border-color: #3d9da0;
+    justify-content: center;
+    font-size: 14px;
+    color:rgb(12, 12, 12);
+}
+.info{
+    border-radius: 4px;
+    border-color: #f0f4f5;
+    font-size: 14px;
+    color:rgb(246, 243, 243);
+    width: 180px;
+}
+.ingresoDatos{
+
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.tituloCampo{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+.resultado{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+
+}
+.imagenResultado{
+    display: flex;
+    flex:6;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.error{
+    color:red;
+    font-style: italic;
+    font-size: 14px;
+}

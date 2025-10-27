@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="orden.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+<title>EJERCICIO INDIVIDUAL</title>
+<div class="ingresoDatos">
+<h1>EJERCICIO DETERMINAR MAYOR Y MENOR EDAD</h1>
+</div>
+<body onload="mostrarPersonas()">
+    <div id="divEmpleado">
+        <div class="principal">
+            <div class="area">
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                    </div>
+
+                </div>
+                <div class="contenedorBoton">
+                </div>
+            </div>
+
+            <div class="area">
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        NOMBRE
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtNombre" />
+                        <div class="error" id="lblErrorNombre"></div>
+                    </div>
+                </div>
+
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        EDAD
+                    </div>
+                    <div>
+                        <input type="text" class="cajaTexto" id="txtEdad" />
+                        <div class="error" id="lblErrorEdad"></div>
+                    </div>
+                </div>
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="GUARDAR" class="estiloBoton"  onclick="agregarPersona();" />
+                    </div>
+                    <div class="contenedorBoton">
+                        <input type="button" value="ENCONTRAR MAYOR" class="estiloBoton" id="btnGuardar" onclick="determinarMayor();" />
+                    </div>
+                    <div class="contenedorBoton">
+                        <input type="button" value="ENCONTRAR MENOR" class="estiloBoton" onclick="determinarMenor();" />
+                    </div>
+                </div>
+                <div id="tablaPersonas" class="areaTabla">
+
+                </div>
+            </div>
+            <div class="logoEscuela">
+                <img src="./krakeLogo.png" width="80%" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
